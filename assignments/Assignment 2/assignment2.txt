@@ -3,12 +3,13 @@ Assignment 2 - Processes and Threads
 1. Assume that you are trying to download a large 2-GB file from the Internet. The file is available from a set of mirror servers, each of which can deliver a subset of the file's bytes; assume that a given request specifics the starting and ending bytes of the file. Explain how you might use threads to improve the download time.
 
 2. What is the biggest advantage of implementing threads in user space? What is the biggest disadvantage?
-
+   The biggest advantage of implementing threads in user space is that they take up less memory space which leads to an easier and faster switching of the user threads. On the other hand, the biggest disadvantage of implementing threads in user space is that one blocked thread leads to blocking of all the threads of the process and it limits one thread to be accessed at one time.
+   
 3. Does Peterson's solution to the mutual-exclusion problem shown in Fig. 2-24 of MOS4e work when process scheduling is preemptive? How about when it is nonpreemptive?
 
 4. The producer-consumer problem can be extended to a system with multiple producers and consumers that write (or read) to (from) one shared buffer. Assume that each producer and consumer runs in its own thread. Will the solution presented in Fig. 2-28, using semaphores, work for this system?
 
-5. How could an operatig system tha can disable interrupts implement semaphores?
+5. How could an operating system that can disable interrupts implement semaphores?
 
 6. A fast-food restaurant has four kinds of employees:
    a. order takers, who take customers' orders;
